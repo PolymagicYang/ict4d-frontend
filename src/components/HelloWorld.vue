@@ -14,7 +14,7 @@ defineProps({
       Curious about the questions? Cast your vote now by simply making a phone call!
     </h3>
     <h4>
-      Check results by phone: (800) 289-5570 then PIN: 9996143198
+      Check results by phone: (800) 289-5570 then PIN: 9996100776 
     </h4>
   </div>
 </template>
