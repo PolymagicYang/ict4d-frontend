@@ -36,6 +36,7 @@ export default {
       this.axios.get('/api/questions')
           .then(response => {
             this.questions = response.data
+            this.showEdit = false;
           })
           .catch(error => {
             console.log(error)
@@ -336,7 +337,7 @@ export default {
           <v-spacer></v-spacer>
           <v-btn
               color="green"
-              @click="showEditDialog = false"
+              @click="fetchQuestions()"
           >
             Ok
           </v-btn>
