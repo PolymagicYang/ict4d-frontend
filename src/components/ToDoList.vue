@@ -60,13 +60,13 @@ export default {
       this.axios.post(`/api/new_phone/${this.newPhone}`)
         .then(response => {
           console.notify(response.data)
+          this.getFreePhones()
         })
         .catch(error => {
           console.log(error)
           // this.free_phones = []
         })
         this.showSearch = false;
-        this.getFreePhones()
     },
     formatResults() {
       return `🗳️ Voting Results: Yes ➤ ${this.question.yes} votes | No ➤ ${this.question.no} votes`;
