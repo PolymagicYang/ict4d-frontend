@@ -36,12 +36,15 @@ export default {
       this.axios.get('/api/questions')
           .then(response => {
             this.questions = response.data
-            this.showEdit = false;
           })
           .catch(error => {
             console.log(error)
             this.questions = []
           })
+    },
+    finishEdit() {
+      this.fetchQuestions()
+      this.showEditDialog = false
     },
     newLanguage(language) {
       const body = {
@@ -337,7 +340,7 @@ export default {
           <v-spacer></v-spacer>
           <v-btn
               color="green"
-              @click="fetchQuestions()"
+              @click="finishEdit()"
           >
             Ok
           </v-btn>
